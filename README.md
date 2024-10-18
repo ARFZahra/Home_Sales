@@ -3,12 +3,13 @@ Home Sales Analysis with PySpark
 In this challenge, I utilized PySpark and SparkSQL to analyze home sales data, compute key metrics, and optimize data processing through techniques like caching and partitioning. 
 
 Following steps are taken to complete the assignment.
+
 The tasks involved:
- Creating a temporary table from home sales data.
- Running several SQL queries to derive insights.
- Using caching to improve performance.
- Partitioning data for optimized querying.
- Verifying caching and uncaching operations.
+Creating a temporary table from home sales data.
+Running several SQL queries to derive insights.
+Using caching to improve performance.
+Partitioning data for optimized querying.
+Verifying caching and uncaching operations.
 
 Files
 The following files were used to complete this project:
@@ -36,25 +37,24 @@ Calculated the average price of homes with three bedrooms, three bathrooms, two 
 4. Found the  average price of a home per "view" rating having an average home price greater than or equal to $350,000
 
 Caching for Optimization
-5. Caching the Temporary Table:
-o Cached the home_sales temporary table to optimize repeated queries.
-6. Checking Cache Status:
-o Verified if the table was successfully cached.
-7. Query Execution on Cached Data:
-o Re-ran the query to calculate the average price per &quot;view&quot; rating for
+5. Caching the Temporary Table: Cached the home_sales temporary table to optimize repeated queries.
+
+6. Checking Cache Status: Verified if the table was successfully cached.
+   
+7. Query Execution on Cached Data: Re-ran the query to calculate the average price per &quot;view&quot; rating for
 homes priced $350,000 or more using cached data. Compared the
 runtime with the uncached version.
 
 Data Partitioning
-8. Partitioning by Date Built:
-o Partitioned the home sales data by the date_built field and saved it in
+8. Partitioning by Date Built: Partitioned the home sales data by the date_built field and saved it in
 parquet format.
 
-9. Creating a Temporary Table for Partitioned Data:
-o Created a temporary table from the partitioned parquet data.
+9. Creating a Temporary Table for Partitioned Data: Created a temporary table from the partitioned parquet data.
+
 10. Executing Queries on Partitioned Data:
 Ran the query to calculate the average price of a home per "view" rating having an average home price greater than or equal to $350,000. Determined the runtime and compare it to uncached runtime. Compared the
 runtime to both the cached and uncached versions.
 
 11. Uncaching the Temporary Table: Uncached the home_sales temporary table to free up memory resources.
+    
 12. Verifying Uncaching:  Verified that the table had been uncached using PySpark commands.
